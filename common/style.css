@@ -1,0 +1,387 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+  --accent-color: black;
+  --text-color: black;
+  --background-base: #FFFFF6;
+  --gray:#F1EEE7;
+}
+
+/* 親の inline フレックスで横並びにする */
+.external-link {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.4rem;
+}
+
+/* リンクの見た目調整（必要なら上書き） */
+.external-link a {
+  text-decoration: underline;
+  color: inherit;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+/* SVGアイコン */
+.external-icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  flex: none;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+p {
+    padding: 0;
+    margin: 0;
+}
+
+.u-font-mont {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+@media (min-width: 768px) {
+    .u-sp{
+        display: none;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.br-sp{
+    display: none;
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    appearance: none;
+}
+
+.u-fon1 {
+    /* 72px */
+    font-size: 4.5em;
+}
+
+.u-fon2 {
+    /* 32px */
+    font-size: 2em;
+}
+
+.u-fon3 {
+    /* 27px */
+    font-size: 1.69em;
+}
+
+.u-fon4 {
+    /* 24px */
+    font-size: 1.5em;
+}
+
+.u-fon5 {
+    /* 20px */
+    font-size: 1.25em;
+}
+
+.u-fon6 {
+    /* 16px */
+    font-size: 1em;
+}
+
+.u-fon7 {
+    /* 14px */
+    font-size: 0.875em;
+}
+
+.u-black{
+    font-weight: 800;
+}
+
+.u-bold{
+    font-weight: bold;
+}
+
+.u-normal{
+    font-weight: 500;
+}
+
+.u-tex-l {
+    text-align: left;
+}
+
+.u-tex-c {
+    text-align: center;
+}
+
+.u-pointer {
+    cursor: pointer;
+}
+
+.u-fix {
+    position: fixed;
+}
+
+.u-rel {
+    position: relative;
+}
+
+.u-abs {
+    position: absolute;
+}
+
+.u-flex {
+    display: flex;
+}
+
+.u-tex-left {
+    text-align: left;
+}
+
+.u-light{
+    font-weight: 300;
+}
+
+.u-contain{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+html,
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-optical-sizing: auto;
+    overflow-x: hidden;
+}
+
+html{
+    background-color: var(--background-base);
+}
+
+body{
+    opacity: 0;
+}
+
+.body__load{
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+.body__hamburger-button--open{
+    height: 100vh;
+    overflow: hidden;
+}
+
+main {
+    width: 100%;
+}
+
+.inner {
+    border:3px solid var(--text-color);
+    position: relative;
+    width: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: repeat;
+    z-index: 50;
+}
+
+/* ボタン */
+.btn {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3em;
+    border-bottom: 2px solid var(--text-color);
+}
+
+.u-arrow-icon{
+    width: 16px;
+    height: 16px;
+}
+
+.btn--primary {
+    color: var(--text-color);
+}
+
+.btn--hover:hover {
+    
+}
+
+/* ナビ */
+.nav {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 1.5em;
+}
+
+/* 動画スタイル */
+.video-wrapper {
+    border: 2px solid var(--text-color);
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/0.47;
+    overflow: hidden;
+}
+
+.work__video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  display: block;
+}
+
+/* アニメーション */
+.text-appear__glidge{
+  animation: glitch1 0.3s 2;
+}
+
+.text-box--load-animation,.text-box--scroll-animation{
+    opacity : 0;
+    transform: translateY(2px);
+}
+
+.image-box--scroll-animation{
+    opacity: 0;
+    scale: 1.1;
+}
+
+.text-appear__feed-in{
+    opacity : 1;
+    transform: translateY(0px);
+    transition: 0.7s linear;
+    transition-delay: 0.3s;
+}
+
+.image-appear__feed-in {
+    opacity: 1;
+    scale: 1;
+    transition: all 0.3s ease-out;
+    transition-delay: 0.7s;
+}
+
+
+/*Keyframes*/
+@keyframes glitch1 {
+  0% {
+    transform: none;
+    opacity: 0.25;
+  }
+  7% {
+    transform: translate(-1px, -2px);
+    opacity: 1;
+  }
+  10% {
+    transform: none;
+    opacity: 0.25;
+  }
+  27% {
+    transform: none;
+    opacity: 1;
+  }
+  30% {
+    transform: translate(-2px, -1px);
+    opacity: 0.5;
+  }
+  35% {
+    transform: none;
+    opacity: 0.25;
+  }
+  52% {
+    transform: none;
+    opacity: 0.25;
+  }
+  55% {
+    transform: translate(-2px, -1px);
+    opacity: 1;
+  }
+  50% {
+    transform: none;
+    opacity: 0.25;
+  }
+  72% {
+    transform: none;
+    opacity: 1;
+  }
+  75% {
+    transform: translate(-1px, -2px);
+    opacity: 0.5;
+  }
+  80% {
+    transform: none;
+    opacity: 0.25;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+
+/* スマホ */
+@media (max-width: 767px) {
+    .u-pc{
+        display: none;
+    }
+    .nav {
+        flex-direction: column;
+        justify-content: left;
+    }
+
+    .u-fon1 {
+    font-size: 2em;
+    }
+
+    .u-fon2 {
+        font-size: 1.5em;
+    }
+
+    .u-fon3 {
+        font-size: calc(9em / 8);
+    }
+
+    .u-fon4 {
+        font-size: 1em;
+    }
+
+    .u-fon5 {
+        font-size: calc(7em / 8);
+    }
+
+    .u-fon6 {
+        font-size: calc(3em / 4);
+    }
+
+    .br-sp{
+        display: block;
+    }
+
+    .inner {
+        border: 10px solid var(--accent-color);
+    }
+}

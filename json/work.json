@@ -1,0 +1,74 @@
+[
+    {
+        "tag": "WEB",
+        "date": "2025-03-31",
+        "title": "TOKYO DJ CLUBの公式サイト_ToB向けデザイン作成",
+        "description": "TOKYO DJ CLUBの公式サイトのデザイン。<br>TOKYO DJ CLUBはクライアントとなる企業様がイベント主催をする際のDJ派遣や機材レンタルを請け負っている会社です。<br>「企業様からのお問い合わせを増やす」という目標のもと、類似の業態の公式サイトからサイトの導線やトンマナなどを洗い出し、DJを派遣するメリットが伝わるようなサイトを目指しました。",
+        "thumbnail":"/image/image9.jpg",
+        "top-image": "/image/TokyoDjClub_Top.mp4",
+        "sub-image1": "/image/TokyoDjClub_About-sp.png",
+        "sub-image2": "/image/TokyoDjClub_Top-sp.png",
+        "url": "/work/work-1/",
+        "site-url": "https://tokyodjclub-to-b.vercel.app/"
+    },
+    {
+        "tag": "WEB",
+        "date": "2024-12-20",
+        "title": "TOKYO DJ部の公式サイト_ToC向けデザイン作成",
+        "description": "TOKYO DJ部はTOKYO DJ CLUBの別事業でありDJスクール事業を行っています。<br>DJスクールの生徒数を増やしたい、DJスクールのコミュニティとしての魅力を認知させるという目標のもとサイトをデザインしました。",
+        "thumbnail":"/image/community.jpg",
+        "top-image": "/image/TokyoDjClub_communuty_Top.mp4",
+        "sub-image1": "/image/TokyoDjClubCommunuty_about-sp.png",
+        "sub-image2": "/image/TokyoDjClubCommunuty_member-sp.png",
+        "url": "/work/work-2/",
+        "site-url": "https://community.tokyodj.jp/"
+    },
+    {
+        "tag": "WEB·印刷",
+        "date": "2024-10-01",
+        "title": "3人のサイコメトラー<br>キャンペーンサイト/ロゴ作成",
+        "description": "上田慎一郎監督の作品のサイトとロゴ制作を担当しました。<br>サイトは市場調査からデザイン・コーディングまでを、ロゴ制作は先方のイメージからラフスケッチを描いて複数案提案させていただきました。",
+        "thumbnail":"/image/psyco.jpg",
+        "top-image": "/image/psyco_top.mp4",
+        "sub-image1": "/image/psyco_about-sp.png",
+        "sub-image2": "/image/psyco_story-sp.png",
+        "url": "/work/work-3/",
+        "site-url": "https://styly.cc/suec/threepsychometrist/"
+    },
+    {
+        "tag": "WEB",
+        "date": "2024-03-20",
+        "title": "マクセル アクアパーク品川 - maxell AQUA PARK SHINAGAWA<br>アクアパークのサンゴ再生活動のwebサイト",
+        "description": "マクセル アクアパーク品川のサンゴ再生へのさまざまな取り組みをまとめたコラムサイト。",
+        "thumbnail":"/image/aqua.png",
+        "top-image": "/image/aquaPark_Top.mp4",
+        "sub-image1": "/image/aquaPark_about-sp.png",
+        "sub-image2": "/image/aquaPark_contents-sp.png",
+        "url": "/work/work-4/",
+        "site-url": "https://www.aqua-park.jp/special/sangosaisei/"
+    },
+    {
+        "tag": "WEB",
+        "date": "2024-02-01",
+        "title": "NEO BLOOM inc.(株式会社ネオブルーム) 公式サイト",
+        "description": "neo bloomというインフルエンサー事務所の公式サイトです。デザインとコーディングをしました。",
+        "thumbnail":"/image/neo-bloom.png",
+        "top-image": "/image/neoBloom_Top.mp4",
+        "sub-image1": "/image/neoBloom_news-sp.png",
+        "sub-image2": "/image/neoBloom_company-sp.png",
+        "url": "/work/work-5/",
+        "site-url": "https://www.neo-bloom.jp/"
+    },
+    {
+        "tag": "WEB",
+        "date": "2025-10-28",
+        "title": "YUTO HAYATA ポートフォリオサイト",
+        "description": "これまでのディレクションや制作の経歴をまとめたポートフォリオサイトの作成をしました。<br>私は制作するとき過去に積み重ねた見たもの、学んだこと、経験を積んでゆき、その層を混ぜ合わせその時にベストなものを作っている感覚があります。<br>そのため<br>•様々なものが集合して1つのものを作り上げるをテーマにグリッドが重なり大きな形になる<br>•視覚的にバラエティがあるが統一感のあるレイアウトを採用<br>などをデザインに取り入れました。",
+        "thumbnail":"",
+        "top-image": "/image/portforio_Top.mp4",
+        "sub-image1": "/image/portforio_profile.png",
+        "sub-image2": "/image/portforio_work.png",
+        "url": "/work/work-6/",
+        "site-url": "https://yuhayata.com/"
+    }
+]
