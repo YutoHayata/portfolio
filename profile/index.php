@@ -12,7 +12,7 @@
     <meta name="keywords" content="Webデザイン,UX,UI,ポートフォリオ,制作実績">
     <meta name="author" content="Yuto Hayata">
     <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#E32636">
+    <meta name="theme-color" content="#3D3D2D">
     <meta property="og:title" content="Yuto Hayata Portfolio">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://yuhayata.com/">
@@ -23,9 +23,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:ital@0;1&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="/fav/favicon.png">
     <link rel="icon" type="image/gif" href="/fav/favicon.gif">
     <link rel="icon" type="image/x-icon" href="/fav/favicon.ico">
@@ -132,7 +130,7 @@
                     </p>
 
                     <div class="contact__decoration title-box--scroll-animation u-abs">
-                        <img class="u-contain" src="/image/dog.svg" alt="">
+                        <img class="u-contain" src="/image/Dog.svg" alt="">
                     </div>
                 </div>
             </section>
@@ -143,7 +141,56 @@
     </main>
 
     <script src="/js/animation.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const header = document.getElementById("header")
+            const root = document.documentElement;
 
+            if (!header) return;
+
+            function setHeaderHeight() {
+                const h = header.getBoundingClientRect().height;
+                console.log(h);
+                root.style.setProperty('--header-height', `${h}px`);
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', setHeaderHeight);
+            } else {
+                setHeaderHeight();
+            }
+
+            let resizeTimer = null;
+            window.addEventListener('resize', function() {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(setHeaderHeight, 120);
+            });
+
+            window.addEventListener('load', setHeaderHeight);
+        });
+
+        (function() {
+            const root = document.documentElement;
+
+            // ビューポートサイズをCSS変数にセット
+            function setViewportVars() {
+                const vw = window.innerWidth;
+                const vh = window.innerHeight;
+                root.style.setProperty('--vw', `${vw}px`);
+                root.style.setProperty('--vh', `${vh}px`);
+            }
+
+            // 初回設定
+            setViewportVars();
+
+            // リサイズ時に更新（スマホでの回転対応など）
+            let resizeTimer = null;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(setViewportVars, 120);
+            });
+        })();
+    </script>
 
 </body>
 

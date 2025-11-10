@@ -10,7 +10,7 @@ usort($works, function ($a, $b) {
 });
 
 // 最新5件だけ取得
-$kvWorks = array_slice($works, 0, 5);
+$kvWorks = array_slice($works, 0, 7);
 
 // 最新3件だけ取得
 $latestWorks = array_slice($works, 0, 3);
@@ -30,7 +30,7 @@ $latestWorks = array_slice($works, 0, 3);
     <meta name="keywords" content="Webデザイン,UX,UI,ポートフォリオ,制作実績">
     <meta name="author" content="Yuto Hayata">
     <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#E32636">
+    <meta name="theme-color" content="#3D3D2D">
     <meta property="og:title" content="Yuto Hayata Portfolio">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://yuhayata.com/">
@@ -69,7 +69,7 @@ $latestWorks = array_slice($works, 0, 3);
             <section id="kv" class="kv u-rel">
 
                 <!-- キャッチコピー -->
-                <div class="kv__catchcopy-wrap u-abs u-flex">
+                <div id="kv__catchcopy-wrap" class="kv__catchcopy-wrap u-abs u-flex">
                     <div class="kv__catchcopy">
                         <img src="/image/catchcopy.svg" alt="">
                     </div>
@@ -243,7 +243,7 @@ $latestWorks = array_slice($works, 0, 3);
                     </p>
 
                     <div class="contact__decoration title-box--scroll-animation u-abs">
-                        <img class="u-contain" src="/image/dog.svg" alt="">
+                        <img class="u-contain" src="/image/Dog.svg" alt="">
                     </div>
                 </div>
             </section>
@@ -257,10 +257,11 @@ $latestWorks = array_slice($works, 0, 3);
     <script src="/js/animation.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            const header = document.getElementById("header")
+            const header = document.getElementById("header");
+            const kvCatchcopy = document.getElementById("kv__catchcopy-wrap");
             const root = document.documentElement;
 
-            if (!header) return;
+            if (!header || !kvCatchcopy) return;
 
             function setHeaderHeight() {
                 const h = header.getBoundingClientRect().height;
@@ -268,19 +269,31 @@ $latestWorks = array_slice($works, 0, 3);
                 root.style.setProperty('--header-height', `${h}px`);
             }
 
-            if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', setHeaderHeight);
-            } else {
-                setHeaderHeight();
+            function setKvCatchcopyHeight() {
+                const catchcopy = kvCatchcopy.getBoundingClientRect().height;
+                console.log("kv__catchcopy-wrap height:", catchcopy);
+                root.style.setProperty('--catchcopy', `${catchcopy}px`);
             }
 
+            // 初期実行
+            setHeaderHeight();
+            setKvCatchcopyHeight();
+
+            // 画面サイズ変更時に再計算
             let resizeTimer = null;
             window.addEventListener('resize', function() {
                 clearTimeout(resizeTimer);
-                resizeTimer = setTimeout(setHeaderHeight, 120);
+                resizeTimer = setTimeout(() => {
+                    setHeaderHeight();
+                    setKvCatchcopyHeight();
+                }, 120);
             });
 
-            window.addEventListener('load', setHeaderHeight);
+            // ページ読み込み完了時にも再計算
+            window.addEventListener('load', () => {
+                setHeaderHeight();
+                setKvCatchcopyHeight();
+            });
         });
 
         (function() {
@@ -290,8 +303,12 @@ $latestWorks = array_slice($works, 0, 3);
             function setViewportVars() {
                 const vw = window.innerWidth;
                 const vh = window.innerHeight;
+                const kvVh = window.innerHeight * 0.75;
+                const kvVhSp = window.innerHeight * 0.9;
                 root.style.setProperty('--vw', `${vw}px`);
                 root.style.setProperty('--vh', `${vh}px`);
+                root.style.setProperty('--kvVh', `${kvVh}px`);
+                root.style.setProperty('--kvVhSp', `${kvVhSp}px`);
             }
 
             // 初回設定
@@ -322,9 +339,20 @@ $latestWorks = array_slice($works, 0, 3);
                 prevEl: '.card02 .swiper-button-prev',
             },
             breakpoints: {
-                1025: {
+                // 767px以下のとき
+                0: {
+                    slidesPerView: 1.2,
+                    spaceBetween: 16,
+                    slidesOffsetBefore: 16,
+                    slidesOffsetAfter: 16,
+                },
+                // 768px以上のとき
+                768: {
+                    slidesPerView: 'auto',
                     spaceBetween: 32,
-                }
+                    slidesOffsetBefore: -240,
+                    slidesOffsetAfter: 32,
+                },
             },
         });
     </script>

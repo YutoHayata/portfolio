@@ -33,19 +33,30 @@
 }
 
 @media (max-width: 767px) {
-
     .footer__inner {
-        padding: 5em 5% 7em 5%;
+        padding: 5em 5% 1em 5%;
         flex-direction: column;
         align-items: flex-start;
     }
 
+    .footer__illust{
+        width: 150%;
+        background-position: right;
+        right: -20%;
+        bottom: 7%;
+    }
+
     .footer__nav-box{
-        margin-top: 2em;
+        margin-top: 2.5em;
         align-items: flex-start;
     }
 
+    .footer__logo{
+        width: 7em;
+    }
+
     .footer__copyright{
-        padding:0.5em 5%;
+        margin-top: 11em;
+        font-size: 0.8em;
     }
 }

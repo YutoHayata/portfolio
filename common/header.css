@@ -45,16 +45,31 @@
 }
 
 @media (max-width: 767px) {
+    .header{
+        border: 2px solid var(--text-color);
+    }
+
     .header__inner {
-    width: 100%;
-    padding: 2em calc(5% + 10px);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+        width: 100%;
+        height: 60px;
+        padding: 0 5%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header__logo{
+        width: 5em;
+        z-index: 80;
+    }
+
+    .header__nav-box{
+        display: none;
+    }
+
     /* ハンバーガーボタン */
     .header__hamburger-button{
-       width: 3em;
+       width: 2.4em;
        top: 50%;
        right: calc(5% + 10px);
        transform: translate(5%,-50%);
@@ -64,10 +79,11 @@
     .header__hamburger-border{
         border: 1.5px solid var(--text-color);
         transition: all 0.3s ease;
+        border-radius: 5px;
     }
 
     .header__hamburger-border:not(:first-child){
-       margin-top: 0.4em;
+       margin-top: 0.45em;
     }
 
     .header__hamburger-button--open .header__hamburger-border{
@@ -75,8 +91,8 @@
     }
 
     .header__hamburger-button--open .header__hamburger-border:first-child{
-        transform: rotate(19.8deg);
-        transform-origin: 0% 0%;
+        transform: rotate(34deg);
+        transform-origin: left center;
     }
 
     .header__hamburger-button--open .header__hamburger-border:nth-child(2){
@@ -84,8 +100,8 @@
     }
 
     .header__hamburger-button--open .header__hamburger-border:last-child{
-        transform: rotate(-19.8deg);
-        transform-origin: 0 100%;
+        transform: rotate(-34deg);
+        transform-origin: left center;
     }
 
     /* ハンバーガーメニュー */
@@ -93,7 +109,8 @@
         overflow: hidden;
         width: 100vw;
         height: 100vh;
-        background-color: var(--accent-color);
+        border: solid 2px var(--text-color);
+        background-color: var(--background-base);
         top: 50%;
         left: 50%;
         transform: translate(50%,-50%);
@@ -102,13 +119,14 @@
     }
 
     .header__hamburger-wrap-background{
-        
+        width: 100%;
+        height: 100%;
+        background-image: url("/image/footer-illust.png");
+        background-repeat: no-repeat;
         background-size: cover;
-        width: 100vw;
-        height: 100vh;
-        z-index: -1;
-        mix-blend-mode: multiply;
+        background-position: center;
         opacity: 0.5;
+        z-index: -1;
     }
 
     .header__hamburger-wrap--open{
@@ -129,14 +147,10 @@
     }
 
     .header__hamburger-nav-text-box {
-        line-height: 1.1;
-        padding: 0 0.2em;
-        width: fit-content;
-        height: fit-content;
-        color:var(--background-base);
-        background-color:var(--text-color);
-        border: 2px solid var(--text-color);
-        font-weight: 300;
+       
+       
+        color:var(--text-colors);
+     
     }
 
     .header__hamburger-deco{

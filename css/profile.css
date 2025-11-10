@@ -10,10 +10,10 @@
 }
 
 .profile__inner {
-    max-width: 1400px;
+    max-width: 1500px;
     margin: 0 auto;
     padding: 0 11%;
-    margin: 15em auto 0 auto;
+    margin: 16em auto 0 auto;
 }
 
 .profile__column {
@@ -94,7 +94,7 @@
 }
 
 .contact__inner {
-    max-width: 1400px;
+    max-width: 1500px;
     margin: 0 auto;
 }
 
@@ -114,39 +114,75 @@
 }
 
 @media (max-width: 767px) {
-    .profile__inner {
-        width: 90%;
-        margin: 7em auto 0em auto;
-        flex-direction: column;
+    /* プロフィール */
+    .profile__dog{
+        width: 20%;
+        top: 0%;
+        left: 5%;
+        transform: translate(10px,-70%);
+        z-index: 7;
     }
 
-    .profile__slice{
-        top: 0%;
-        left: auto;
-        right: 0%;
-        transform: translate(0%,-50%);
-        z-index: -1;
+    .profile__inner {
+        padding: 0 5%;
+        margin: 12em auto 0 auto;
+    }
+
+    .profile__column {
+        flex-direction: column;
+        padding: 3em 5%;
+    }
+
+    .profile__column:after {
+    top: 9px;
+    left: 9px;
     }
 
     .profile__portrait{
-        order: 1;
-        width: 100%;
-        margin-top: 1em;
+        order: 0;
+        width: 64%;
+        margin: 0 auto;
     }
 
     .profile__wrapper{
-        order: 0;
+        order: 1;
         width: 100%;
+        margin-top: 1.5em;
     }
 
-    .profile__questionnaire{
-        width: 90%;
-        margin-top: 3em;
+    .profile__title{
+        width: 60%;
+        top: 0%;
+        right: 0%;
+        transform: translateY(-130%);
+    }
+
+    .profile__name{
+        text-align: center;
+    }
+
+    .profile__btn {
+        margin: 2em 0 0 auto;
     }
 
     /* CONTACT */
+    .contact {
+        margin: 7em auto 0 auto;
+
+    }
+
     .contact__inner {
-        width: 90%;
-        margin: 5em auto 5em auto;
+        padding: 0 5% 12em 5%;
+    }
+
+    .contact__title {
+        margin: 0 auto;
+        width: 78%;
+    }
+
+    .contact__decoration{
+        width: 45%;
+        bottom: 0%;
+        right: -10%;
     }
 }

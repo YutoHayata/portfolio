@@ -20,7 +20,7 @@ $firstWork = $works[0];
     <meta name="keywords" content="Webデザイン,UX,UI,ポートフォリオ,制作実績">
     <meta name="author" content="Yuto Hayata">
     <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#E32636">
+    <meta name="theme-color" content="#3D3D2D">
     <meta property="og:title" content="Yuto Hayata Portfolio">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://yuhayata.com/">
@@ -31,9 +31,7 @@ $firstWork = $works[0];
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:ital@0;1&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="/fav/favicon.png">
     <link rel="icon" type="image/gif" href="/fav/favicon.gif">
     <link rel="icon" type="image/x-icon" href="/fav/favicon.ico">
@@ -50,7 +48,7 @@ $firstWork = $works[0];
             <!-- ワーク -->
             <section id="work" class="work u-rel">
                 <div class="work__inner">
-                    <div class="work__top-image">
+                    <div class="work__top-movie">
                         <div class="work__video-wrapper">
                             <video class="work__video" autoplay muted loop playsinline>
                                 <source src=<?= $firstWork['top-image'] ?> type="video/mp4">

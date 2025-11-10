@@ -26,7 +26,7 @@ $latestWorks = $works;
     <meta name="keywords" content="Webデザイン,UX,UI,ポートフォリオ,制作実績">
     <meta name="author" content="Yuto Hayata">
     <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#E32636">
+    <meta name="theme-color" content="#3D3D2D">
     <meta property="og:title" content="Yuto Hayata Portfolio">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://yuhayata.com/">
@@ -37,9 +37,7 @@ $latestWorks = $works;
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:ital@0;1&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="/fav/favicon.png">
     <link rel="icon" type="image/gif" href="/fav/favicon.gif">
     <link rel="icon" type="image/x-icon" href="/fav/favicon.ico">
@@ -72,14 +70,6 @@ $latestWorks = $works;
                     <p class="work__text text-box--scroll-animation u-tex-c u-fon6">
                         WEBサイトや印刷物のデザイン、<br class="br-sp">イラスト制作の実績です。
                     </p>
-                    <a href="/work" class="text-box--scroll-animation work__btn btn btn--primary btn--hover">
-                        <p class="u-fon4 u-font-mont">WORK</p>
-                        <svg class="u-arrow-icon" width="11" height="13" viewBox="0 0 11 13" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M0.146772 0.478803C0.434745 0.00757492 1.05053 -0.141152 1.52177 0.146772L10.5218 5.64677C10.819 5.82843 11.0003 6.15192 11.0003 6.50029C11.0003 6.84865 10.819 7.17215 10.5218 7.3538L1.52177 12.8538C1.05053 13.1417 0.434744 12.993 0.146772 12.5218C-0.141152 12.0505 0.00757447 11.4347 0.478803 11.1468L8.08134 6.50029L0.478803 1.8538C0.00757504 1.56583 -0.141152 0.950047 0.146772 0.478803Z"
-                                fill="currentColor" />
-                        </svg>
-                    </a>
 
 
                     <div class="work__wrapper text-box--scroll-animation">

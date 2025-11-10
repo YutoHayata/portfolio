@@ -2,7 +2,7 @@
 .work {}
 
 .work__inner {
-    max-width: 1400px;
+    max-width: 1500px;
     margin: 0 auto;
     padding: 0 11%;
     margin: 15em auto 0 auto;
@@ -70,17 +70,37 @@
 }
 
 @media (max-width: 767px) {
+    /* WORK */
     .work__inner {
-        width: 90%;
-        margin: 7em auto 5em auto;
+        padding: 0 5%;
+        margin: 9em auto 0 auto;
+    }
+
+    .work__title {
+        width:56%;
+    }
+
+    .work__decoration,.work__decoration2{
+        height: 100%;
     }
 
     .work__wrapper {
+        margin-top: 2em;
+        margin-bottom: 7em;
+        display: flex;
         flex-direction: column;
-        gap: 2em;
+        gap: 3em;
     }
 
     .work__detail-wrapper {
         width: 100%;
+    }
+
+    .work__detail-nav-text-box{
+        margin-top: 0.7em;
+    }
+
+    .work__detail-text{
+        font-size: 20px;
     }
 }

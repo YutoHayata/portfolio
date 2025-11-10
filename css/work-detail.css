@@ -2,32 +2,53 @@
 .work {}
 
 .work__inner {
-    max-width: 1400px;
+    max-width: 1500px;
     margin: 0 auto;
-    width: 77%;
-    margin: 7em auto 4em auto;
+    padding: 0 11%;
+    margin: 11em auto 4em auto;
 }
 
-.work__top-image {
+.work__top-movie {
     width: 100%;
     aspect-ratio: 2/1;
-    border-radius: 36px;
+    border: 2px solid var(--text-color);
     overflow: hidden;
 }
 
-.work__video-wrapper{
-    min-height: 100%;
+.work__top-image{
+    width: fit-content;
+    height: fit-content;
     overflow: hidden;
+}
+
+.work__video-wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.work__video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.work__top-movie img {
+    width: 45%;
+    height: auto;
+    object-fit: cover;
 }
 
 .work__top-image img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
 }
 
 .work__wrapper {
-    margin: 1em auto 0 0;
+    margin: 2em auto 0 0;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -38,16 +59,8 @@
     width: 64%;
 }
 
-.work__slice{
-    top: 0%;
-    right: 0%;
-    transform: translate(-50%,-50%);
-    z-index: -1;
-}
-
 .work__detail-text {
     margin-top: 0.5em;
-    letter-spacing: 0.1em;
     line-height: 1.3;
 }
 
@@ -76,7 +89,7 @@
     overflow: hidden;
     aspect-ratio: 3 / 4;
     border: 2px solid var(--text-color);
-    border-radius: 36px;
+    border-radius: 24px;
 }
 
 .work__detail-image img {
@@ -91,17 +104,9 @@
 
 @media (max-width: 767px) {
     .work__inner {
-        width: 90%;
+        padding: 0 5%;
         margin: 7em auto 5em auto;
         flex-direction: column;
-    }
-
-    .work__slice{
-        width: 30%;
-        top: 0%;
-        right: 0%;
-        transform: translate(0%,-50%);
-        z-index: -1;
     }
 
     .work__wrapper {
@@ -120,5 +125,11 @@
     .work__detail-image-wrap{
         width: 100%;
     }
+
+    .work__top-image{
+        width: 100%;
+        height: 20em;
+        overflow: hidden;
+}
 
 }
