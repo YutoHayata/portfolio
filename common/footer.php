@@ -6,11 +6,11 @@
 
 <footer class="footer u-rel">
     <div class="footer__illust u-abs">
-        <img class="u-contain" src="/image/footer-illust.png" alt="">
+        <img class="u-contain" src="/image/footer-illust.png" alt="" loading="lazy">
     </div>
     <div class="footer__inner">
         <div class="footer__logo">
-            <img class="u-contain" src="/image/logo.svg" alt="">
+            <img class="u-contain" src="/image/logo.svg" alt="" loading="lazy">
         </div>
 
         <nav class="footer__nav-box u-flex">
@@ -34,7 +34,7 @@
 
         <div class="footer__copyright u-tex-l">
             <span class="u-fon7 u-light">
-                © YUTO HAYATA
+                © YUTO HAYATA All rights reserved.
             </span>
         </div>
     </div>

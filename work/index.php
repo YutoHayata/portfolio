@@ -10,38 +10,18 @@ usort($works, function ($a, $b) {
 });
 
 $latestWorks = $works;
+
+$pageTitle = 'WORK | YUTO HAYATA ポートフォリオサイト';
+$pageDescription = '身の回りの世界から拾った小さな発見を積み重ね、デザインとして形にしています。WEB・印刷・イラストの制作実績をまとめました。';
+
 ?>
 
 <!DOCTYPE html>
 <html lang="ja">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/common/style.css" type="text/css">
+    <?php include($_SERVER['DOCUMENT_ROOT'] . '/common/head.php'); ?>
     <link rel="stylesheet" href="/css/work.css" type="text/css">
-    <title>WORKS | YUTO HAYATA ポートフォリオサイト</title>
-
-    <meta name="description" content="YUTO HAYATA | 大学院にて工業デザインを専攻し、在学中は印刷およびWebデザイン会社でインターンとしてレタッチ業務やチラシ・ポスターの制作に携わりました。前職では3年間、Webサイト制作におけるディレクション・デザイン・コーディングを担当し、大手企業サイトからLPまで幅広い案件を経験しました。企画からデザイン、実装まで一貫して対応できる点を強みとしています。">
-    <meta name="keywords" content="Webデザイン,UX,UI,ポートフォリオ,制作実績">
-    <meta name="author" content="Yuto Hayata">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#3D3D2D">
-    <meta property="og:title" content="Yuto Hayata Portfolio">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://yuhayata.com/">
-    <meta property="og:image" content="https://yuhayata.com/image/ogp.jpg">
-    <meta property="og:description" content="YUTO HAYATA | 大学院にて工業デザインを専攻し、在学中は印刷およびWebデザイン会社でインターンとしてレタッチ業務やチラシ・ポスターの制作に携わりました。前職では3年間、Webサイト制作におけるディレクション・デザイン・コーディングを担当し、大手企業サイトからLPまで幅広い案件を経験しました。企画からデザイン、実装まで一貫して対応できる点を強みとしています。">
-    <meta property="og:site_name" content="Yuto Hayata Portfolio">
-    <meta property="og:locale" content="ja_JP">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="/fav/favicon.png">
-    <link rel="icon" type="image/gif" href="/fav/favicon.gif">
-    <link rel="icon" type="image/x-icon" href="/fav/favicon.ico">
-    <link rel="shortcut icon" href="/fav/favicon.ico">
 </head>
 
 <body id="body">
@@ -68,7 +48,7 @@ $latestWorks = $works;
                     </div>
 
                     <p class="work__text text-box--scroll-animation u-tex-c u-fon6">
-                        WEBサイトや印刷物のデザイン、<br class="br-sp">イラスト制作の実績です。
+                        身の回りの世界から拾った小さな発見を積み重ね、<br>デザインとして形にしています。<br>WEB・印刷・イラストの制作実績をまとめました。
                     </p>
 
 

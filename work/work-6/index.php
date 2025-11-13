@@ -4,38 +4,16 @@ $works = json_decode($jsonData, true);
 
 // 最初の1件だけ取得
 $firstWork = $works[5];
+$pageTitle = "{$firstWork['title']} | YUTO HAYATA ポートフォリオサイト";
+$pageDescription = "{$firstWork['description']}";
 ?>
 
 <!DOCTYPE html>
 <html lang="ja">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/common/style.css" type="text/css">
+    <?php include($_SERVER['DOCUMENT_ROOT'] . '/common/head.php'); ?>
     <link rel="stylesheet" href="/css/work-detail.css" type="text/css">
-    <title>WORKS | YUTO HAYATA ポートフォリオサイト</title>
-
-    <meta name="description" content="YUTO HAYATA | 大学院にて工業デザインを専攻し、在学中は印刷およびWebデザイン会社でインターンとしてレタッチ業務やチラシ・ポスターの制作に携わりました。前職では3年間、Webサイト制作におけるディレクション・デザイン・コーディングを担当し、大手企業サイトからLPまで幅広い案件を経験しました。企画からデザイン、実装まで一貫して対応できる点を強みとしています。">
-    <meta name="keywords" content="Webデザイン,UX,UI,ポートフォリオ,制作実績">
-    <meta name="author" content="Yuto Hayata">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#3D3D2D">
-    <meta property="og:title" content="Yuto Hayata Portfolio">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://yuhayata.com/">
-    <meta property="og:image" content="https://yuhayata.com/image/ogp.jpg">
-    <meta property="og:description" content="YUTO HAYATA | 大学院にて工業デザインを専攻し、在学中は印刷およびWebデザイン会社でインターンとしてレタッチ業務やチラシ・ポスターの制作に携わりました。前職では3年間、Webサイト制作におけるディレクション・デザイン・コーディングを担当し、大手企業サイトからLPまで幅広い案件を経験しました。企画からデザイン、実装まで一貫して対応できる点を強みとしています。">
-    <meta property="og:site_name" content="Yuto Hayata Portfolio">
-    <meta property="og:locale" content="ja_JP">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="/fav/favicon.png">
-    <link rel="icon" type="image/gif" href="/fav/favicon.gif">
-    <link rel="icon" type="image/x-icon" href="/fav/favicon.ico">
-    <link rel="shortcut icon" href="/fav/favicon.ico">
 </head>
 
 <body id="body">
@@ -68,7 +46,7 @@ $firstWork = $works[5];
 
                             <h2 class="work__detail-text  u-fon2"><?= $firstWork['title'] ?></h2>
 
-                            <p class="work__text u-font-mont u-fon6 u-normal">
+                            <p class="work__text u-fon6 u-normal">
                                 <?= $firstWork['description'] ?>
                                 <br>
                                 <br>
@@ -90,7 +68,7 @@ $firstWork = $works[5];
                                 クライアント
                             </h3>
 
-                            <p class="work__text u-font-mont u-fon6 u-normal">
+                            <p class="work__text u-fon6 u-normal">
                                 自主制作
                             </p>
 
@@ -98,7 +76,7 @@ $firstWork = $works[5];
                                 製作期間
                             </h3>
 
-                            <p class="work__text u-font-mont u-fon6 u-normal">
+                            <p class="work__text u-fon6 u-normal">
                                 1か月 (サイトの要件定義からデザイン·コーディング、公開まで)
                             </p>
 
@@ -106,7 +84,7 @@ $firstWork = $works[5];
                                 使用ツール
                             </h3>
 
-                            <p class="work__text u-font-mont u-fon6 u-normal">
+                            <p class="work__text u-fon6 u-normal">
                                 Figma（UIデザイン・ワイヤーフレーム）<br>HTML / CSS / JavaScript / PHP（フロントエンド・バックエンドコーディング）
                             </p>
 
@@ -114,9 +92,8 @@ $firstWork = $works[5];
                                 意図・ポイント
                             </h3>
 
-                            <p class="work__text u-font-mont u-fon6 u-normal">
-                                案件ごとの属性（デザイン・コーディングなど）を明確にする必要があったため<br>
-                                多様な制作経験を整理して、ユーザーにわかりやすく伝える情報設計を意識しました。
+                            <p class="work__text u-fon6 u-normal">
+                                多様な事例を掲載するため、シンプルで見やすいレイアウトを採用。<br>ラフ感のある犬のイラストを制作し、穏やかで柔らかい人柄と、好奇心旺盛な姿勢を表現。背景色は淡いトーンの色を採用しました。<br>本サイトのキャッチコピーである「Pile Up Discoveries（発見を積み重ねる）」は日々見聞きしたものを好奇心で蓄積し、デザインとしてアウトプットしていく姿勢を表現しています。<br>また、同業種のポートフォリオを多数ユーザー視点で分析し、ワイヤーフレームやサイトマップを作成。トップページから各事例へスムーズに移行できる導線設計を心がけ、作品だけでなく思考の流れも伝わる構成にしています。
                             </p>
                         </div>
 
@@ -152,138 +129,6 @@ $firstWork = $works[5];
         window.addEventListener('load', function() {
             bodyOpen.classList.add("body__load")
         });
-
-        const canvas = document.getElementById("myCanvas");
-        const ctx = canvas.getContext("2d");
-
-        // --- キャンバスサイズ調整 ---
-        function resizeCanvas() {
-            canvas.width = 200;
-            canvas.height = 200;
-            drawBackground();
-        }
-        resizeCanvas();
-        window.addEventListener("resize", resizeCanvas);
-
-        // --- 背景描画（透明保持） ---
-        function drawBackground() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            // 透明背景なので fillRect 不要
-        }
-
-        // --- 画像読み込み ---
-        const overlayImg = new Image();
-        overlayImg.src = "/image/s-3000x3000_v-frms_webp_eab87d5f-79e6-4da2-a503-845a5335c0cd_small.webp";
-        const overlayImg2 = new Image();
-        overlayImg2.src = "/image/dj3.png";
-        const overlayImg3 = new Image();
-        overlayImg3.src = "/image/the-new-york-public-library-o784yEsNIS8-unsplash.webp";
-        const overlayImg4 = new Image();
-        overlayImg4.src = "/image/dj2.png";
-
-        const maskImg = new Image();
-        maskImg.src = "/image/base.png";
-
-        const images = [overlayImg, overlayImg2, overlayImg3, overlayImg4, maskImg];
-        let maskData = null;
-        let imagesLoaded = 0;
-
-        function checkLoaded() {
-            imagesLoaded++;
-            if (imagesLoaded === images.length) {
-                createMaskData();
-                startGlitch();
-            }
-        }
-
-        images.forEach(img => {
-            img.addEventListener("load", checkLoaded);
-            img.addEventListener("error", () => console.error("image load error:", img.src));
-        });
-
-        // --- マスク生成 ---
-        function createMaskData() {
-            if (!maskImg.complete) return;
-            const mcanvas = document.createElement("canvas");
-            const mctx = mcanvas.getContext("2d");
-            mcanvas.width = canvas.width;
-            mcanvas.height = canvas.height;
-            mctx.drawImage(maskImg, 0, 0, mcanvas.width, mcanvas.height);
-            maskData = mctx.getImageData(0, 0, mcanvas.width, mcanvas.height).data;
-        }
-
-        // --- 描画位置取得 ---
-        function getWeightedPositionFromMask() {
-            if (!maskData) return {
-                dx: Math.random() * canvas.width,
-                dy: Math.random() * canvas.height
-            };
-            let x, y, brightness, tries = 0;
-            const threshold = 30;
-            do {
-                x = Math.floor(Math.random() * canvas.width);
-                y = Math.floor(Math.random() * canvas.height);
-                const i = (y * canvas.width + x) * 4;
-                const r = maskData[i];
-                const g = maskData[i + 1];
-                const b = maskData[i + 2];
-                brightness = 0.2126 * r + 0.7152 * g + 0.0722 * b;
-                tries++;
-            } while ((Math.random() * 255 > brightness || brightness < threshold) && tries < 200);
-            return {
-                dx: x,
-                dy: y
-            };
-        }
-
-        // --- グリッチ描画 ---
-        let intenseDrawId = null;
-        let normalLoopId = null;
-
-        function stopGlitch() {
-            if (intenseDrawId) {
-                clearInterval(intenseDrawId);
-                intenseDrawId = null;
-            }
-            if (normalLoopId) {
-                clearInterval(normalLoopId);
-                normalLoopId = null;
-            }
-        }
-
-        function drawRandomBlock(count = 1) {
-            for (let i = 0; i < count; i++) {
-                const imgs = [overlayImg, overlayImg2, overlayImg3, overlayImg4];
-                const img = imgs[Math.floor(Math.random() * imgs.length)];
-                const blockSize = Math.floor(Math.random() * 50) + 10;
-                const sx = Math.floor(Math.random() * Math.max(1, img.width - blockSize));
-                const sy = Math.floor(Math.random() * Math.max(1, img.height - blockSize));
-                const {
-                    dx,
-                    dy
-                } = getWeightedPositionFromMask();
-                ctx.drawImage(img, sx, sy, blockSize, blockSize, dx, dy, blockSize, blockSize);
-            }
-        }
-
-        function startGlitch() {
-            stopGlitch();
-            if (!maskData) createMaskData();
-
-            intenseDrawId = setInterval(() => drawRandomBlock(32), 50);
-
-            const switchTimer = setTimeout(() => {
-                clearInterval(intenseDrawId);
-                intenseDrawId = null;
-                normalLoopId = setInterval(() => drawRandomBlock(1), 30);
-            }, 2000);
-
-            setTimeout(() => {
-                clearTimeout(switchTimer);
-                stopGlitch();
-                console.log("🔹 グリッチ描画を停止しました");
-            }, 3000);
-        }
     </script>
 </body>
 

@@ -116,19 +116,29 @@
     height: 12px!important;
 }
 
+#luxy {
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
 
 /* NEWS */
-.news {}
+.news {
+    border-top:3px solid var(--text-color);
+    background-color: var(--background-base);
+    z-index: 50;
+    padding-top: 7em;
+}
 
 .news__inner {
     padding: 0 18%;
     max-width: 1500px;
     margin: 0 auto;
-    margin: 7em auto 0 auto;
 }
 
 .news__title{
-    width: 32%;
+    width: 30%;
 }
 
 
@@ -156,13 +166,17 @@
 }
 
 /* WORK */
-.work {}
+.work {
+    background-color: var(--background-base);
+    padding-top: 10em;
+    z-index: 50;
+}
 
 .work__inner {
     max-width: 1500px;
     margin: 0 auto;
     padding: 0 11%;
-    margin: 10em auto 0 auto;
+    margin: 0 auto;
 }
 
 .work__title{
@@ -171,12 +185,12 @@
 }
 
 .work__decoration{
-    top: 0%;
+    top: -11%;
     left: -18%;
 }
 
 .work__decoration2{
-    top: 0%;
+    top: -11%;
     right: -18%;
 }
 
@@ -295,12 +309,6 @@
 
 .profile__wrapper {
     width: 50%;
-}
-
-
-
-.profile__name {
-   
 }
 
 .profile__text {
@@ -430,12 +438,12 @@
     }
 
     .kv__dog2 {
-        width: 6em;
+        width: 4.5em;
         left: auto;
         right: 0%;
         top: calc(var(--catchcopy));
         bottom: auto;
-        transform: translate(40% , -20%);
+        transform: translate(10% , -20%);
         z-index: 8;
     }
 
@@ -463,9 +471,14 @@
     }
 
     /* NEWS */
+    .news{
+        border-top: 2px solid var(--text-color);
+        padding-top: 3em;
+    }
+
     .news__inner {
         padding: 0 5%;
-        margin: 3em auto 0 auto;
+        margin: 0 auto;
     }
 
     .news__title {
@@ -474,6 +487,7 @@
 
     .news__detail-wrapper {
         margin-top: 1em;
+        row-gap: 0em;
     }
 
     .news__detail{
@@ -487,9 +501,13 @@
     }
 
     /* WORK */
+    .work{
+        padding-top: 7em;
+    }
+
     .work__inner {
         padding: 0 5%;
-        margin: 7em auto 0 auto;
+        margin: 0 auto;
     }
 
     .work__title {
@@ -541,8 +559,8 @@
     }
 
     .profile__column:after {
-    top: 9px;
-    left: 9px;
+        top: 9px;
+        left: 9px;
     }
 
     .profile__portrait{

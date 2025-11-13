@@ -1,8 +1,3 @@
-<head>
-    <link rel="stylesheet" href="/common/header.css" type="text/css">
-</head>
-
-
 <header id="header" class="header u-fix">
     <div class="header__inner u-rel">
         <div class="header__logo logo u-rel">
@@ -33,16 +28,16 @@
         <div id="hamburger-wrap" class="header__hamburger-wrap u-sp u-fix">
             <nav class="header__hamburger-nav-box nav u-abs">
                 <a href="/" class="header__hamburger-nav-text-box nav__text-box u-tex-left u-pointer">
-                    <p class="header__text u-fon2">HOME</p>
+                    <p class="header__text u-fon2 u-font-mont">HOME</p>
                 </a>
                 <a href="/work" class="header__hamburger-nav-text-box nav__text-box u-tex-left u-pointer">
-                    <p class="header__text u-fon2">WORK</p>
+                    <p class="header__text u-fon2 u-font-mont">WORK</p>
                 </a>
                 <a href="/profile" class="header__hamburger-nav-text-box nav__text-box u-tex-left u-pointer">
-                    <p class="header__text u-fon2">PROFILE</p>
+                    <p class="header__text u-fon2 u-font-mont">PROFILE</p>
                 </a>
                 <a href="/#contact" class="header__hamburger-nav-text-box nav__text-box u-tex-left u-pointer">
-                    <p class="header__text u-fon2">CONTACT</p>
+                    <p class="header__text u-fon2 u-font-mont">CONTACT</p>
                 </a>
             </nav>
 

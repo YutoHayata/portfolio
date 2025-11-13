@@ -46,6 +46,7 @@ p {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+    font-display: swap;
 }
 
 @media (min-width: 768px) {
@@ -107,12 +108,8 @@ button{
     font-size: 0.875em;
 }
 
-.u-black{
-    font-weight: 800;
-}
-
 .u-bold{
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .u-normal{
@@ -169,6 +166,7 @@ body {
     font-family: "Zen Kaku Gothic New", sans-serif;
     font-style: normal;
     font-weight: 700;
+    font-display: swap;
     font-optical-sizing: auto;
     overflow-x: hidden;
 }
@@ -224,10 +222,6 @@ main {
     color: var(--text-color);
 }
 
-.btn--hover:hover {
-    
-}
-
 /* ナビ */
 .nav {
     display: flex;
@@ -271,7 +265,7 @@ main {
     opacity: 1;
     scale: 1;
     transition: all 0.3s ease-out;
-    transition-delay: 0.7s;
+    transition-delay: 0.3s;
 }
 
 
@@ -400,7 +394,11 @@ main {
     }
 
     .u-fon6 {
-        font-size: calc(3em / 4);
+        font-size: calc(14em /16);
+    }
+
+    .u-fon7 {
+        font-size: calc(3em /4);
     }
 
     .br-sp{

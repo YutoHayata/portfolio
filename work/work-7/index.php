@@ -4,38 +4,16 @@ $works = json_decode($jsonData, true);
 
 // 最初の1件だけ取得
 $firstWork = $works[6];
+$pageTitle = "{$firstWork['title']} | YUTO HAYATA ポートフォリオサイト";
+$pageDescription = "{$firstWork['description']}";
 ?>
 
 <!DOCTYPE html>
 <html lang="ja">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/common/style.css" type="text/css">
+    <?php include($_SERVER['DOCUMENT_ROOT'] . '/common/head.php'); ?>
     <link rel="stylesheet" href="/css/work-detail.css" type="text/css">
-    <title>WORKS | YUTO HAYATA ポートフォリオサイト</title>
-
-    <meta name="description" content="YUTO HAYATA | 大学院にて工業デザインを専攻し、在学中は印刷およびWebデザイン会社でインターンとしてレタッチ業務やチラシ・ポスターの制作に携わりました。前職では3年間、Webサイト制作におけるディレクション・デザイン・コーディングを担当し、大手企業サイトからLPまで幅広い案件を経験しました。企画からデザイン、実装まで一貫して対応できる点を強みとしています。">
-    <meta name="keywords" content="Webデザイン,UX,UI,ポートフォリオ,制作実績">
-    <meta name="author" content="Yuto Hayata">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#3D3D2D">
-    <meta property="og:title" content="Yuto Hayata Portfolio">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://yuhayata.com/">
-    <meta property="og:image" content="https://yuhayata.com/image/ogp.jpg">
-    <meta property="og:description" content="YUTO HAYATA | 大学院にて工業デザインを専攻し、在学中は印刷およびWebデザイン会社でインターンとしてレタッチ業務やチラシ・ポスターの制作に携わりました。前職では3年間、Webサイト制作におけるディレクション・デザイン・コーディングを担当し、大手企業サイトからLPまで幅広い案件を経験しました。企画からデザイン、実装まで一貫して対応できる点を強みとしています。">
-    <meta property="og:site_name" content="Yuto Hayata Portfolio">
-    <meta property="og:locale" content="ja_JP">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="/fav/favicon.png">
-    <link rel="icon" type="image/gif" href="/fav/favicon.gif">
-    <link rel="icon" type="image/x-icon" href="/fav/favicon.ico">
-    <link rel="shortcut icon" href="/fav/favicon.ico">
 </head>
 
 <body id="body">
@@ -60,7 +38,7 @@ $firstWork = $works[6];
 
                             <h2 class="work__detail-text  u-fon2"><?= $firstWork['title'] ?></h2>
 
-                            <p class="work__text u-font-mont u-fon6 u-normal">
+                            <p class="work__text u-fon6 u-normal">
                                 <?= $firstWork['description'] ?>
                                 <br>
                                 <br>
@@ -82,33 +60,32 @@ $firstWork = $works[6];
                                 クライアント
                             </h3>
 
-                            <p class="work__text u-font-mont u-fon6 u-normal">
-                                自主制作
+                            <p class="work__text u-fon6 u-normal">
+                                バンド四段様
                             </p>
 
                             <h3 class="work__sub-title u-fon3">
                                 製作期間
                             </h3>
 
-                            <p class="work__text u-font-mont u-fon6 u-normal">
-                                1か月 (サイトの要件定義からデザイン·コーディング、公開まで)
+                            <p class="work__text u-fon6 u-normal">
+                                3~4か月 (ジャケット制作からCDのデザイン入稿まで)
                             </p>
 
                             <h3 class="work__sub-title u-fon3">
                                 使用ツール
                             </h3>
 
-                            <p class="work__text u-font-mont u-fon6 u-normal">
-                                Figma（UIデザイン・ワイヤーフレーム）<br>HTML / CSS / JavaScript / PHP（フロントエンド・バックエンドコーディング）
+                            <p class="work__text u-fon6 u-normal">
+                                アクリル画材、illustrator,photoshop
                             </p>
 
                             <h3 class="work__sub-title u-fon3">
-                                意図・ポイント
+                                ポイント
                             </h3>
 
-                            <p class="work__text u-font-mont u-fon6 u-normal">
-                                案件ごとの属性（デザイン・コーディングなど）を明確にする必要があったため<br>
-                                多様な制作経験を整理して、ユーザーにわかりやすく伝える情報設計を意識しました。
+                            <p class="work__text u-fon6 u-normal">
+                                打ち合わせの中で、メンバーから「ヒプノシスのような批評性を感じる世界観にしたい」というリクエストがあり、彼らの好みに沿いつつ、ヒプノシス作品が持つ“音楽性を象徴化する視覚表現”というアプローチを参考に、テーマの軸を構築しました。<br>ビジュアルは、人の頭部がコーヒー・ビール・ワインのドリンクサーバーとして機能しているという象徴的なモチーフで構成しています。アルバムタイトル『無言のパーティー』を起点に、社会的な場で無意識に“ふるまう”人々、そしてその内面性の曖昧さや空虚さを批評的に捉えたコンセプトを視覚化しました。外側は華やかだが内側は静かで様々なことに思い悩む、そんなそんなバンドの持つ歌詞世界の多層性と、音楽性のコントラストを重ね合わせたデザインになっております。<br>ロック／インディシーンにおいて印象に残る“最初の名刺”となる仕上がりを目指しました。
                             </p>
                         </div>
 

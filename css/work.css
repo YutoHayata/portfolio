@@ -1,5 +1,4 @@
 /* WORK */
-.work {}
 
 .work__inner {
     max-width: 1500px;
@@ -14,12 +13,12 @@
 }
 
 .work__decoration{
-    top: 0%;
+    top: -11%;
     left: -18%;
 }
 
 .work__decoration2{
-    top: 0%;
+    top: -11%;
     right: -18%;
 }
 

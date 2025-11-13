@@ -4,38 +4,16 @@ $works = json_decode($jsonData, true);
 
 // 最初の1件だけ取得
 $firstWork = $works[0];
+$pageTitle = "{$firstWork['title']} | YUTO HAYATA ポートフォリオサイト";
+$pageDescription = "{$firstWork['description']}";
 ?>
 
 <!DOCTYPE html>
 <html lang="ja">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/common/style.css" type="text/css">
+    <?php include($_SERVER['DOCUMENT_ROOT'] . '/common/head.php'); ?>
     <link rel="stylesheet" href="/css/work-detail.css" type="text/css">
-    <title>WORKS | YUTO HAYATA ポートフォリオサイト</title>
-
-    <meta name="description" content="YUTO HAYATA | 大学院にて工業デザインを専攻し、在学中は印刷およびWebデザイン会社でインターンとしてレタッチ業務やチラシ・ポスターの制作に携わりました。前職では3年間、Webサイト制作におけるディレクション・デザイン・コーディングを担当し、大手企業サイトからLPまで幅広い案件を経験しました。企画からデザイン、実装まで一貫して対応できる点を強みとしています。">
-    <meta name="keywords" content="Webデザイン,UX,UI,ポートフォリオ,制作実績">
-    <meta name="author" content="Yuto Hayata">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#3D3D2D">
-    <meta property="og:title" content="Yuto Hayata Portfolio">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://yuhayata.com/">
-    <meta property="og:image" content="https://yuhayata.com/image/ogp.jpg">
-    <meta property="og:description" content="YUTO HAYATA | 大学院にて工業デザインを専攻し、在学中は印刷およびWebデザイン会社でインターンとしてレタッチ業務やチラシ・ポスターの制作に携わりました。前職では3年間、Webサイト制作におけるディレクション・デザイン・コーディングを担当し、大手企業サイトからLPまで幅広い案件を経験しました。企画からデザイン、実装まで一貫して対応できる点を強みとしています。">
-    <meta property="og:site_name" content="Yuto Hayata Portfolio">
-    <meta property="og:locale" content="ja_JP">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="/fav/favicon.png">
-    <link rel="icon" type="image/gif" href="/fav/favicon.gif">
-    <link rel="icon" type="image/x-icon" href="/fav/favicon.ico">
-    <link rel="shortcut icon" href="/fav/favicon.ico">
 </head>
 
 <body id="body">
@@ -87,7 +65,7 @@ $firstWork = $works[0];
                                 クライアント
                             </h3>
 
-                            <p class="work__text u-font-mont u-fon6 u-normal">
+                            <p class="work__text u-fon6 u-normal">
                                 TOKYO DJ CLUB
                             </p>
 
@@ -95,7 +73,7 @@ $firstWork = $works[0];
                                 製作期間
                             </h3>
 
-                            <p class="work__text u-font-mont u-fon6 u-normal">
+                            <p class="work__text u-fon6 u-normal">
                                 1か月(サイトの要件定義からデザイン·コーディングまで)
                             </p>
 
@@ -103,34 +81,24 @@ $firstWork = $works[0];
                                 使用ツール
                             </h3>
 
-                            <p class="work__text u-font-mont u-fon6 u-normal">
+                            <p class="work__text u-fon6 u-normal">
                                 Figma,next.js,photoshop
                             </p>
 
                             <h3 class="work__sub-title u-fon3">
-                                問題と目標
+                                問題点と課題
                             </h3>
 
-                            <p class="work__text u-font-mont u-fon6 u-normal">
-                                企業様からのお問い合わせが少なかったことが問題点だったため、お問い合わせ数を増やすという目標を立てました。<br>
-                                以前のサイト(https://tokyodj.jp/)はサービス内容が散漫でどのページにどのような内容が基材されているかがわかりにくいため、初めて訪れた企業様も理解がしやすいよう情報を整理しました。
-                            </p>
-
-                            <h3 class="work__sub-title u-fon3">
-                                ターゲットと市場調査
-                            </h3>
-
-                            <p class="work__text u-font-mont u-fon6 u-normal">
-                                企業様からのお問い合わせを増やす目標の元、ターゲット設定を行いました。類似のターゲットだと思われるサイトを分析しサイトマップや、レイアウト、ワイヤーフレームを作成しました。
+                            <p class="work__text u-fon6 u-normal">
+                                以前のサイト(https://tokyodj.jp/)はどの層に届けたいかが明確ではありませんでした。そのため記載コンテンツがターゲットに絞れていない、導線が最適化されていないなど課題がありました。
                             </p>
 
                             <h3 class="work__sub-title u-fon3">
                                 デザインについて
                             </h3>
 
-                            <p class="work__text u-font-mont u-fon6 u-normal">
-                                サイトで伝えたい印象は高級感、かっこいい、モード感、モダンでブランドカラー は黒というオーダーだったため提案資料(後述で記載します)を作成しました。
-                                画像はモダンを出すためレタッチにより雰囲気を出し、パララックスやグリッドレイアウトを採用して高級感、かっこいい、モード感を演出しました。
+                            <p class="work__text u-fon6 u-normal">
+                                類似サイトの分析から、ToB向けでは“信頼感と洗練さ”が重視されている一方で、DJカルチャー特有の熱量や非日常感の表現が弱いことに気づきました。<br>そこで、黒を基調にすることで信頼感と高級感を両立し、企業が安心して依頼できる印象を演出。また、ファーストビューにイベント動画を配置し、企業担当者が“イベントの空気感を直感的に想像できる体験を設計しました。<br>また、サイトの演出に視差効果(パララックス)を使用することでDJが魅力的に空間を演出することをサイトで伝わるようにしました。
                             </p>
                         </div>
 

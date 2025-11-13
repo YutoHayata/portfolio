@@ -4,38 +4,16 @@ $works = json_decode($jsonData, true);
 
 // 最初の1件だけ取得
 $firstWork = $works[2];
+$pageTitle = "{$firstWork['title']} | YUTO HAYATA ポートフォリオサイト";
+$pageDescription = "{$firstWork['description']}";
 ?>
 
 <!DOCTYPE html>
 <html lang="ja">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/common/style.css" type="text/css">
+    <?php include($_SERVER['DOCUMENT_ROOT'] . '/common/head.php'); ?>
     <link rel="stylesheet" href="/css/work-detail.css" type="text/css">
-    <title>WORKS | YUTO HAYATA ポートフォリオサイト</title>
-
-    <meta name="description" content="YUTO HAYATA | 大学院にて工業デザインを専攻し、在学中は印刷およびWebデザイン会社でインターンとしてレタッチ業務やチラシ・ポスターの制作に携わりました。前職では3年間、Webサイト制作におけるディレクション・デザイン・コーディングを担当し、大手企業サイトからLPまで幅広い案件を経験しました。企画からデザイン、実装まで一貫して対応できる点を強みとしています。">
-    <meta name="keywords" content="Webデザイン,UX,UI,ポートフォリオ,制作実績">
-    <meta name="author" content="Yuto Hayata">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#3D3D2D">
-    <meta property="og:title" content="Yuto Hayata Portfolio">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://yuhayata.com/">
-    <meta property="og:image" content="https://yuhayata.com/image/ogp.jpg">
-    <meta property="og:description" content="YUTO HAYATA | 大学院にて工業デザインを専攻し、在学中は印刷およびWebデザイン会社でインターンとしてレタッチ業務やチラシ・ポスターの制作に携わりました。前職では3年間、Webサイト制作におけるディレクション・デザイン・コーディングを担当し、大手企業サイトからLPまで幅広い案件を経験しました。企画からデザイン、実装まで一貫して対応できる点を強みとしています。">
-    <meta property="og:site_name" content="Yuto Hayata Portfolio">
-    <meta property="og:locale" content="ja_JP">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="/fav/favicon.png">
-    <link rel="icon" type="image/gif" href="/fav/favicon.gif">
-    <link rel="icon" type="image/x-icon" href="/fav/favicon.ico">
-    <link rel="shortcut icon" href="/fav/favicon.ico">
 </head>
 
 <body id="body">
@@ -68,7 +46,7 @@ $firstWork = $works[2];
 
                             <h2 class="work__detail-text  u-fon2"><?= $firstWork['title'] ?></h2>
 
-                            <p class="work__text u-font-mont u-fon6 u-normal">
+                            <p class="work__text u-fon6 u-normal">
                                 <?= $firstWork['description'] ?>
                                 <br>
                                 <br>
@@ -90,7 +68,7 @@ $firstWork = $works[2];
                                 クライアント
                             </h3>
 
-                            <p class="work__text u-font-mont u-fon6 u-normal">
+                            <p class="work__text u-fon6 u-normal">
                                 TOKYO DJ CLUB
                             </p>
 
@@ -98,7 +76,7 @@ $firstWork = $works[2];
                                 製作期間
                             </h3>
 
-                            <p class="work__text u-font-mont u-fon6 u-normal">
+                            <p class="work__text u-fon6 u-normal">
                                 1か月(サイトの要件定義からデザイン·コーディングまで)
                             </p>
 
@@ -106,7 +84,7 @@ $firstWork = $works[2];
                                 使用ツール
                             </h3>
 
-                            <p class="work__text u-font-mont u-fon6 u-normal">
+                            <p class="work__text u-fon6 u-normal">
                                 Figma,next.js,photoshop
                             </p>
 
@@ -114,7 +92,7 @@ $firstWork = $works[2];
                                 意図・ポイント
                             </h3>
 
-                            <p class="work__text u-font-mont u-fon6 u-normal">
+                            <p class="work__text u-fon6 u-normal">
                                 TOKYO DJ部はスクール以外にも生徒や先生同士の仲の良さやクラブとの結びつきなどコミュニティとしての魅力があります。<br>
                                 そのためサイトのデザインも「親しみやすさ」「コミュニティー感」を訴求できるように提案資料を作成(あとに記述します)してデザインを作成しました。
                             </p>
@@ -123,7 +101,7 @@ $firstWork = $works[2];
                                 ターゲットと市場調査
                             </h3>
 
-                            <p class="work__text u-font-mont u-fon6 u-normal">
+                            <p class="work__text u-fon6 u-normal">
                                 企業様からのお問い合わせを増やす目標の元、ターゲット設定を行いました。類似のターゲットだと思われるサイトを分析しサイトマップや、レイアウト、ワイヤーフレームを作成しました。
                             </p>
 
@@ -131,7 +109,7 @@ $firstWork = $works[2];
                                 デザインで工夫した点
                             </h3>
 
-                            <p class="work__text u-font-mont u-fon6 u-normal">
+                            <p class="work__text u-fon6 u-normal">
                                 提案資料から
                                 <br>・フォントはゴシックでフォントウェイトは太め
                                 <br>・余白は広めに取り間に遊びの要素をいれる
