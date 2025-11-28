@@ -5,9 +5,11 @@
 </head>
 
 <footer class="footer u-rel">
-    <div class="footer__illust u-abs">
+
+    <div class="footer__illust u-abs" data-speed-y="3">
         <img class="u-contain" src="/image/footer-illust.png" alt="" loading="lazy">
     </div>
+
     <div class="footer__inner">
         <div class="footer__logo">
             <img class="u-contain" src="/image/logo.svg" alt="" loading="lazy">

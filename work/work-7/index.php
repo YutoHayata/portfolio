@@ -89,7 +89,7 @@ $pageDescription = "{$firstWork['description']}";
                             </p>
                         </div>
 
-                        <!-- <div class="work__detail-image-wrap">
+                        <div class="work__detail-image-wrap">
                             <div class="work__detail-image">
                                 <img src=<?= $firstWork['sub-image1'] ?> alt="">
                             </div>
@@ -97,7 +97,7 @@ $pageDescription = "{$firstWork['description']}";
                             <div class="work__detail-image">
                                 <img src=<?= $firstWork['sub-image2'] ?> alt="">
                             </div>
-                        </div> -->
+                        </div>
                     </div>
 
                     <a href="/work" class="work__btn btn btn--primary btn--hover u-pointer">

@@ -14,17 +14,44 @@ $kvWorks = array_slice($works, 0, 7);
 
 // 最新3件だけ取得
 $latestWorks = array_slice($works, 0, 3);
-
-$pageTitle = 'YUTO HAYATA ポートフォリオサイト';
-$pageDescription = 'YUTO HAYATA | 大学院にて工業デザインを専攻し、在学中は印刷およびWebデザイン会社でインターンとしてレタッチ業務やチラシ・ポスターの制作に携わりました。前職では3年間、Webサイト制作におけるディレクション・デザイン・コーディングを担当し、大手企業サイトからLPまで幅広い案件を経験しました。企画からデザイン、実装まで一貫して対応できる点を強みとしています。';
 ?>
 
 <!DOCTYPE html>
 <html lang="ja">
 
 <head>
-    <?php include($_SERVER['DOCUMENT_ROOT'] . '/common/head.php'); ?>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/common/style.css" type="text/css">
     <link rel="stylesheet" href="/css/home.css" type="text/css">
+    <title>YUTO HAYATA ポートフォリオサイト</title>
+
+    <meta name="description" content="YUTO HAYATA | 大学院にて工業デザインを専攻し、在学中は印刷およびWebデザイン会社でインターンとしてレタッチ業務やチラシ・ポスターの制作に携わりました。前職では3年間、Webサイト制作におけるディレクション・デザイン・コーディングを担当し、大手企業サイトからLPまで幅広い案件を経験しました。企画からデザイン、実装まで一貫して対応できる点を強みとしています。">
+    <meta name="keywords" content="Webデザイン,UX,UI,ポートフォリオ,制作実績">
+    <meta name="author" content="Yuto Hayata">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#E32636">
+    <meta property="og:title" content="Yuto Hayata Portfolio">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yuhayata.com/">
+    <meta property="og:image" content="https://yuhayata.com/image/ogp.jpg">
+    <meta property="og:description" content="YUTO HAYATA | 大学院にて工業デザインを専攻し、在学中は印刷およびWebデザイン会社でインターンとしてレタッチ業務やチラシ・ポスターの制作に携わりました。前職では3年間、Webサイト制作におけるディレクション・デザイン・コーディングを担当し、大手企業サイトからLPまで幅広い案件を経験しました。企画からデザイン、実装まで一貫して対応できる点を強みとしています。">
+    <meta property="og:site_name" content="Yuto Hayata Portfolio">
+    <meta property="og:locale" content="ja_JP">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="/fav/favicon.png">
+    <link rel="icon" type="image/gif" href="/fav/favicon.gif">
+    <link rel="icon" type="image/x-icon" href="/fav/favicon.ico">
+    <link rel="shortcut icon" href="/fav/favicon.ico">
+
+    <link rel="icon" type="image/png" href="/fav/favicon.png">
+    <link rel="icon" type="image/gif" href="/fav/favicon.gif">
+    <link rel="icon" type="image/x-icon" href="/fav/favicon.ico">
+    <link rel="shortcut icon" href="/fav/favicon.ico">
     <link
         rel="stylesheet"
         href="/swiper/swiper-bundle.min.css" />
@@ -33,13 +60,13 @@ $pageDescription = 'YUTO HAYATA | 大学院にて工業デザインを専攻し�
 
 <body id="body">
     <main id="main">
+        <div class="inner u-rel">
 
-        <!-- ヘッダー -->
-        <?php include($_SERVER['DOCUMENT_ROOT'] . '/common/header.php'); ?>
-        <div id="luxy" class="inner u-rel">
+            <!-- ヘッダー -->
+            <?php include($_SERVER['DOCUMENT_ROOT'] . '/common/header.php'); ?>
 
             <!-- キービジュアル -->
-            <section id="kv" class="kv u-rel luxy-el" data-speed-y="7">
+            <section id="kv" class="kv u-rel">
 
                 <!-- キャッチコピー -->
                 <div id="kv__catchcopy-wrap" class="kv__catchcopy-wrap u-abs u-flex">
@@ -48,7 +75,7 @@ $pageDescription = 'YUTO HAYATA | 大学院にて工業デザインを専攻し�
                     </div>
                     <div class="kv__catchcopy-border"></div>
                     <div class="kv__catchcopy-textwrap">
-                        <h1 class="u-fon4 u-font-mont">YUTO HAYATA Portfolio</h1>
+                        <h1 class="u-fon4 u-font-mont">YUTO HAYATA Portforio</h1>
                         <h2 class="u-fon7">ディレクター/デザイナー/コーディング</h2>
                     </div>
                 </div>
@@ -86,7 +113,7 @@ $pageDescription = 'YUTO HAYATA | 大学院にて工業デザインを専攻し�
             </section>
 
             <!-- ニュース-->
-            <section id="news" class="news u-rel luxy-el">
+            <section id="news" class="news u-rel">
 
                 <div class="news__inner u-rel">
                     <div class="news__title title-box--scroll-animation u-rel">
@@ -103,14 +130,14 @@ $pageDescription = 'YUTO HAYATA | 大学院にて工業デザインを専攻し�
                             </h3>
                         </a>
 
-                        <a href="/work/work-7" class="news__detail u-flex">
+                        <!-- <div class="news__detail">
                             <div class="news__tag-wrap text-box--scroll-animation">
-                                <p class="u-fon6 u-font-mont u-normal">2025.10.01</p>
-                                <p class="u-fon6 u-font-mont u-normal">WORK</p>
+                                <p class="u-fon6">2025.11.01</p>
+                                <p class="u-fon6">WORK</p>
                             </div>
-                            <h3 class="news__text text-box--scroll-animation u-fon5">バンド四段 1stアルバム「無言のパーティー」ジャケット • 歌詞カードを制作しました。
+                            <h3 class="news__text text-box--scroll-animation u-font-mont u-fon5">ポートフォリオサイトを公開しました。
                             </h3>
-                        </a>
+                        </div> -->
                     </div>
                 </div>
             </section>
@@ -120,19 +147,19 @@ $pageDescription = 'YUTO HAYATA | 大学院にて工業デザインを専攻し�
                 <!-- 背景 -->
                 <div class="work__inner u-rel">
                     <div class="work__title title-box--scroll-animation u-rel">
-                        <img class="u-contain" src="/image/work.svg" alt="" loading="lazy">
+                        <img class="u-contain" src="/image/work.svg" alt="">
 
                         <div class="work__decoration title-box--scroll-animation u-abs">
-                            <img class="u-contain" src="/image/work-deco.svg" alt="" loading="lazy">
+                            <img class="u-contain" src="/image/work-deco.svg" alt="">
                         </div>
 
                         <div class="work__decoration2 title-box--scroll-animation u-abs">
-                            <img class="u-contain" src="/image/work-deco2.svg" alt="" loading="lazy">
+                            <img class="u-contain" src="/image/work-deco2.svg" alt="">
                         </div>
                     </div>
 
                     <p class="work__text text-box--scroll-animation u-tex-c u-fon6">
-                        身の回りの世界から拾った小さな発見を積み重ね、<br>デザインとして形にしています。<br>WEB・印刷・イラストの制作実績をまとめました。
+                        WEBサイトや印刷物のデザイン、<br class="br-sp">イラスト制作の実績です。
                     </p>
                     <a href="/work" class="text-box--scroll-animation work__btn btn btn--primary btn--hover">
                         <p class="u-fon4 u-font-mont">WORK</p>
@@ -148,7 +175,7 @@ $pageDescription = 'YUTO HAYATA | 大学院にて工業デザインを専攻し�
                         <?php foreach ($latestWorks as $work): ?>
                             <a href=<?= $work['url'] ?> class="work__detail-wrapper u-pointer">
                                 <div class="work__detail-image">
-                                    <img src=<?= $work['thumbnail'] ?> class="image-box--scroll-animation" alt="" loading="lazy">
+                                    <img src=<?= $work['thumbnail'] ?> class="image-box--scroll-animation" alt="">
                                 </div>
                                 <div class="work__detail-nav-text-box u-tex-left u-normal u-font-mont u-pointer">
                                     <p class="header__text u-fon6"><?= $work['tag'] ?></p>
@@ -168,18 +195,18 @@ $pageDescription = 'YUTO HAYATA | 大学院にて工業デザインを専攻し�
 
                 <!-- DOG -->
                 <div class="profile__dog u-abs">
-                    <img class="u-contain" src="/image/Dog2.svg" alt="Dog" loading="lazy">
+                    <img class="u-contain" src="/image/Dog2.svg" alt="">
                 </div>
 
                 <div class="profile__inner u-rel">
                     <div class="profile__column u-rel">
 
                         <div class="profile__title u-abs">
-                            <img class="image-box--scroll-animation u-contain" src="/image/profile.svg" alt="" loading="lazy">
+                            <img class="image-box--scroll-animation u-contain" src="/image/profile.svg" alt="">
                         </div>
 
                         <div class="profile__portrait">
-                            <img class="image-box--scroll-animation u-contain" src="/image/profile.jpg" alt="" loading="lazy">
+                            <img class="image-box--scroll-animation u-contain" src="/image/profile.jpg" alt="">
                         </div>
 
                         <div class="profile__wrapper">
@@ -216,7 +243,7 @@ $pageDescription = 'YUTO HAYATA | 大学院にて工業デザインを専攻し�
                     </p>
 
                     <div class="contact__decoration title-box--scroll-animation u-abs">
-                        <img class="u-contain" src="/image/Dog.svg" alt="" loading="lazy">
+                        <img class="u-contain" src="/image/Dog.svg" alt="">
                     </div>
                 </div>
             </section>
@@ -228,9 +255,6 @@ $pageDescription = 'YUTO HAYATA | 大学院にて工業デザインを専攻し�
 
     <script src="/swiper/swiper-bundle.min.js"></script>
     <script src="/js/animation.js"></script>
-    <script src="/js/parallax.js"></script>
-    <script src="/js/luxy.min.js"></script>
-
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const header = document.getElementById("header");
@@ -241,11 +265,13 @@ $pageDescription = 'YUTO HAYATA | 大学院にて工業デザインを専攻し�
 
             function setHeaderHeight() {
                 const h = header.getBoundingClientRect().height;
+                console.log(h);
                 root.style.setProperty('--header-height', `${h}px`);
             }
 
             function setKvCatchcopyHeight() {
                 const catchcopy = kvCatchcopy.getBoundingClientRect().height;
+                console.log("kv__catchcopy-wrap height:", catchcopy);
                 root.style.setProperty('--catchcopy', `${catchcopy}px`);
             }
 

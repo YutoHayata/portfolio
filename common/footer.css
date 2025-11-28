@@ -4,9 +4,10 @@
 }
 
 .footer__illust{
-    width: 72%;
+    pointer-events: none;
+    width: 78%;
     right: 0%;
-    bottom: 7%;
+    bottom: 0%;
 }
 
 .footer__inner {
@@ -43,7 +44,7 @@
         width: 150%;
         background-position: right;
         right: -20%;
-        bottom: 7%;
+        bottom: 0%;
     }
 
     .footer__nav-box{

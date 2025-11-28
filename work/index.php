@@ -26,10 +26,9 @@ $pageDescription = '身の回りの世界から拾った小さな発見を積み
 
 <body id="body">
     <main id="main">
+        <!-- ヘッダー -->
+        <?php include($_SERVER['DOCUMENT_ROOT'] . '/common/header.php'); ?>
         <div class="inner u-rel">
-
-            <!-- ヘッダー -->
-            <?php include($_SERVER['DOCUMENT_ROOT'] . '/common/header.php'); ?>
 
             <!-- ワーク -->
             <section id="work" class="work u-rel">
@@ -77,7 +76,6 @@ $pageDescription = '身の回りの世界から拾った小さな発見を積み
     </main>
 
     <script src="/js/animation.js"></script>
-
 </body>
 
 </html>
